@@ -7,6 +7,7 @@ import { editable as e, SheetProvider } from "@theatre/r3f";
 import { PerspectiveCamera } from "@theatre/r3f";
 import demoProjectState from './state.json'
 import {OrbitControls} from "@react-three/drei";
+import {VisionPro} from "./models/VisionPro";
 
 studio.initialize();
 studio.extend(extension)
@@ -30,10 +31,9 @@ function App() {
                 <OrbitControls />
                 <ambientLight />
                 <e.pointLight theatreKey="Light" position={[10, 10, 10]} />
-                <e.mesh theatreKey="Cube">
-                    <boxGeometry args={[1, 1, 1]} />
-                    <meshStandardMaterial color="hotpink" />
-                </e.mesh>
+
+                <VisionPro scale={20} rotation-y={1} />
+
             </SheetProvider>
         </Canvas>
     );
