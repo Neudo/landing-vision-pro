@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import "./fonts/SFProDisplay-Bold.ttf"
+import "./fonts/SFProDisplay-Regular.ttf"
+import "./fonts/SFProDisplay-Light.ttf"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

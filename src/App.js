@@ -8,6 +8,8 @@ import { PerspectiveCamera } from "@theatre/r3f";
 import demoProjectState from './state.json'
 import {OrbitControls} from "@react-three/drei";
 import {VisionPro} from "./models/VisionPro";
+import Header from "./components/Layout/Header";
+
 
 studio.initialize();
 studio.extend(extension)
@@ -23,19 +25,31 @@ function App() {
 
 
     return (
+
+        // Scene
+        <>
+            <Header/>
         <Canvas
             style={{ height: '100vh', width: '100%' }}
         >
+            {/*<OrbitControls />*/}
             <SheetProvider sheet={demoSheet}>
-                <PerspectiveCamera theatreKey="Camera" makeDefault position={ [5,5,-5] } fov={75} />
-                <OrbitControls />
+                <PerspectiveCamera theatreKey="Camera" makeDefault position={ [-3.5,-2.1,6.8] } fov={75} />
                 <ambientLight />
                 <e.pointLight theatreKey="Light" position={[10, 10, 10]} />
-
-                <VisionPro scale={20} rotation-y={1} />
-
+                <VisionPro scale={20} rotation-y={.5} position={ [-3, 0,0] } />
             </SheetProvider>
         </Canvas>
+
+            <div className="container">
+                <h2>Welcome to the era of spatial computing.</h2>
+            </div>
+
+
+            {/*// Html*/}
+
+        </>
+
     );
 }
 
