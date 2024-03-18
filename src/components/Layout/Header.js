@@ -8,7 +8,7 @@ function Header(props) {
                 <h1>Vision Pro</h1>
             </nav>
 
-            <span>Scroll to discover</span>
+            <span className="hidden">Scroll to discover</span>
         </>
     );
 }

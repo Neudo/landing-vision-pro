@@ -1,6 +1,3 @@
-
-
-
 @font-face {
   font-family: "Light";
   src: local("Light"),
@@ -26,6 +23,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.no-scroll{
+  overflow: hidden;
+}
+
+.hidden{
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
 
 h1, h2, h3{
   font-family: 'Bold', sans-serif;
@@ -37,9 +43,10 @@ h1{
 
 h2{
   font-size: 2.5rem;
+  margin-bottom: 30vh;
 }
 
 .container  {
-  max-width: 1400px;
-  padding: 0 20px;
+  max-width: 50vw;
+  padding: 100vh 20px 0;
 }
