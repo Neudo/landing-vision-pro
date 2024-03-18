@@ -21,16 +21,16 @@ const demoSheet = getProject('Demo Project', { state: demoProjectState  }).sheet
 document.body.classList.add('no-scroll');
 function App() {
 
-    const handleScroll = () => {
+    const handleScrollOptions = () => {
         document.body.classList.remove('no-scroll');
         document.querySelector('span').classList.remove('hidden')
     }
 
     useEffect(() => {
         setTimeout(() => {
-        handleScroll()
+        handleScrollOptions()
         }, 4000)
-        demoSheet.project.ready.then(() => demoSheet.sequence.play({ iterationCount: 1, range: [0, 10] }))
+        demoSheet.project.ready.then(() => demoSheet.sequence.play({ iterationCount: 1, range: [0, 4] }))
     }, [])
 
     const { position, rotationY,rotationX } = useControls({
