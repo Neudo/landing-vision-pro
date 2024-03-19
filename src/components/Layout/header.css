@@ -1,8 +1,6 @@
 nav{
     display: flex;
     align-items: center;
-    background-color: #f2f2f2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     justify-content: center;
     position: absolute;
@@ -12,11 +10,34 @@ nav{
     left: 0;
 }
 
+img{
+
+
+    width: 408px;
+    margin: auto;
+    display: block;
+}
+
 span{
-    font-family: 'Light', sans-serif;
+    font-family: 'Regular', sans-serif;
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     transition: opacity .3s ease;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    background: #0071e3;
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 980px;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 25px;
+    padding: 3px 10px;
 }

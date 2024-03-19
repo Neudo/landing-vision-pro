@@ -39,7 +39,14 @@ h1, h2, h3{
 }
 
 h1{
-  font-size: 5.5rem;
+  font-size: 64px;
+  letter-spacing: -0,009em;
+  @media only screen and (max-width: 768px) {
+    font-size: 48px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 40px;
+  }
 }
 
 h2{
@@ -51,7 +58,7 @@ h2{
   max-width: 50vw;
   position: relative;
   transform: translateY(110vh);
-  padding: 40vh 20px 0;
+  padding: 40vh 5vw 0;
 }
 
 .mainTitle{
@@ -59,7 +66,7 @@ h2{
   position: fixed;
   top: 50vh;
   transform: translateY(-50%);
-  left: 20px;
+  left: 5vw;
   opacity: 1;
   transition: opacity .7s ease, transform .7s ease-in-out;
   transition-delay: .3s;

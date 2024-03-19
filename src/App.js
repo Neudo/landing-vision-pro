@@ -48,7 +48,6 @@ function App() {
                     visionProRef.current.rotation.y += 0.002;
                 }
             } else {
-                console.log('remove listener')
                 document.body.removeEventListener('wheel', checkScrollDirection)
             }
         }
@@ -131,8 +130,7 @@ function App() {
 
             </Canvas>
 
-            <h2 className="mainTitle hide-text">Welcome to the era of spatial computing.</h2>
-
+            <h1 className="mainTitle hide-text">Welcome to the era of spatial computing.</h1>
 
             <div className="container">
                 <h2 className="secondaryTitle">Apple Vision Pro seamlessly blends digital content with your physical space.</h2>

@@ -1,5 +1,7 @@
 import React from 'react';
 import './header.css';
+import logo from '../../img/logo-visionpro.png';
+
 
 function Header(props) {
 
@@ -14,9 +16,8 @@ function Header(props) {
     return (
         <>
             <nav>
-                <h1>Vision Pro</h1>
+                <img  src={logo} alt="Logo apple vision pro"/>
             </nav>
-
             <span className="hidden">Scroll to discover</span>
         </>
     );
