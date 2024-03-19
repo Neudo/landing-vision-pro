@@ -29,6 +29,11 @@
               "z": -3.1915926535897925
             },
             "far": 2000
+          },
+          "VisionPro": {
+            "position": {
+              "x": 0
+            }
           }
         }
       },
@@ -722,6 +727,19 @@
                     ],
                     "type": "bezier",
                     "value": 3
+                  },
+                  {
+                    "id": "Fx6kAHwc3u",
+                    "position": 4,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 3.3099999999999987
                   }
                 ]
               },
@@ -754,6 +772,19 @@
                     ],
                     "type": "bezier",
                     "value": 0
+                  },
+                  {
+                    "id": "Auz_1sAjul",
+                    "position": 4,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -0.10000000000000026
                   }
                 ]
               },
@@ -788,8 +819,8 @@
                     "value": -4.660000000000008
                   },
                   {
-                    "id": "rq05SIKz7f",
-                    "position": 3.967,
+                    "id": "NXemWIA4Gz",
+                    "position": 4,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -798,7 +829,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -5
+                    "value": -5.259999999999997
                   }
                 ]
               }
@@ -815,6 +846,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "5q5im5Lm-M-m86Aj",
     "oSY-OCJ-Up1klyeY",
     "3HxAHt9AcKLXzR_G"
   ]
