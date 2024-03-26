@@ -40,7 +40,7 @@ h1, h2, h3{
 
 h1{
   font-size: 64px;
-  letter-spacing: -0,009em;
+  letter-spacing: -0.009em;
   @media only screen and (max-width: 768px) {
     font-size: 48px;
   }
@@ -58,7 +58,8 @@ h2{
   max-width: 50vw;
   position: relative;
   transform: translateY(110vh);
-  padding: 40vh 5vw 0;
+  padding: 0 5vw 0;
+  opacity: 0;
 }
 
 .mainTitle{
