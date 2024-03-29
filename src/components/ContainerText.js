@@ -14,8 +14,8 @@ function ContainerText() {
             gsap.to(".page", {
                 scrollTrigger: {
                     trigger: ".page",
-                    start: "top top",
-                    end: "bottom 30%",
+                    start: "top 30%",
+                    end: "bottom 60%",
                     pin: true,
                     pinSpacing: false,
                     markers: true
@@ -26,19 +26,20 @@ function ContainerText() {
     }, [])
 
     return (
-        <div ref={container} className="App">
+        <div ref={container} className="container">
 
             <div className="separator"></div>
             <div className="page">
-                <h1>Welcome to the era of spatial computing.</h1>
+                <h1 className="mainTitle" >Welcome to the era of spatial computing.</h1>
             </div>
 
             <div className="page2">
                 <h2>Apple Vision Pro seamlessly blends digital content with your physical space.</h2>
-            </div>
-
-            <div className="page3">
-                <h2>You navigate simply by using your eyes, hands, and voice.</h2>
+                <h2>Apple Vision Pro seamlessly blends digital content with your physical space.</h2>
+                <h2>Apple Vision Pro seamlessly blends digital content with your physical space.</h2>
+                <h2>Apple Vision Pro seamlessly blends digital content with your physical space.</h2>
+                <h2>Apple Vision Pro seamlessly blends digital content with your physical space.</h2>
+                <h2>Apple Vision Pro seamlessly blends digital content with your physical space.</h2>
             </div>
         </div>
     );
