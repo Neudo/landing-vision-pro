@@ -51,8 +51,9 @@ h1{
 
 h2{
   font-size: 3rem;
-  margin-bottom: 30vh;
-  /*opacity: 0;*/
+  margin-bottom: 25vh;
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 h2.section-title{
@@ -63,18 +64,20 @@ h2.section-title{
 .container  {
   max-width: 50vw;
   position: relative;
+  top: 43vh;
 }
 
 .mainTitle{
-  /*opacity: 0;*/
+  transition: opacity .3s ease, transform .4s ease-out;
 }
 
-/*.hide-text{*/
-/*  opacity: 0;*/
-/*}*/
+.hide-text{
+  opacity: 0;
+  transform: translateX(-150px);
+}
 
 .separator{
-  background-color: blanchedalmond;
+  /*background-color: blanchedalmond;*/
   height: 106vh;
   width: 100%;
 }
@@ -104,9 +107,21 @@ h2.section-title{
 }
 
 .page,
-.page2,
-.page3 {
+.page2
+ {
   height: 100vh;
   width: 100%;
   padding: 1px 50px 0;
+}
+
+.page{
+  height: 60vh;
+}
+
+.finalRoom{
+  height: 100vh;
+  background-color: lightcoral;
+  top: 140vh;
+  position: relative;
+  z-index: -1;
 }
