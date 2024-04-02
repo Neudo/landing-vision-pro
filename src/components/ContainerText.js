@@ -52,8 +52,8 @@ function ContainerText() {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: title,
-                        start: "top 90%",
-                        markers: true,
+                        start: "top 75%",
+                        markers: false,
                         once: false,
                     },
                 })

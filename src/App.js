@@ -11,6 +11,7 @@ import {Environment} from "@react-three/drei";
 import {VisionPro} from "./models/VisionPro";
 import Header from "./components/Layout/Header";
 import ContainerText from "./components/ContainerText";
+import {useRotateToHalf} from "./customhooks/useRotateToHalf";
 
 studio.initialize();
 studio.extend(extension)
@@ -26,7 +27,11 @@ function App() {
     }
     const visionProRef = useRef()
     const [visionProIsRotatable, setVisionProIsRotatable] = useState(false)
-    const visionProIsRotatableRef = useRef(visionProIsRotatable);
+    const visionProIsRotatableRef = useRef(visionProIsRotatable)
+    const [rotateToHalf, setRotateToHalf] = useState(false)
+
+    useRotateToHalf( rotateToHalf ? visionProRef.current.rotation.y : null)
+
 
     useEffect(() => {
         visionProIsRotatableRef.current = visionProIsRotatable;
@@ -62,7 +67,7 @@ function App() {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 const intersecting = entry.isIntersecting
-                if(intersecting && window.scrollY < 150 ){
+                if(intersecting && window.scrollY < 150){
                     setVisionProIsRotatable(true)
                     document.body.classList.add('no-scroll');
                     if(document.body.classList.contains('no-scroll')){
@@ -73,19 +78,20 @@ function App() {
                     visionProRight.project.ready.then(() => visionProRight.sequence.play({ iterationCount: 1, range: [0, 2] }).then(rotateOnScroll))
                 } else if(!intersecting){
                     if(window.scrollY < 150){
-                        console.log('on est pas là en base de la page')
-                        console.log('scrollY', window.scrollY)
-                    setVisionProIsRotatable(false)
-                    visionProRight.project.ready.then(() => visionProRight.sequence.play({ iterationCount: 1, direction: 'reverse', rate: 1.5, range: [0, 1.8] }))
+                        setVisionProIsRotatable(false)
+                        setRotateToHalf(false)
+                        visionProRight.project.ready.then(() => visionProRight.sequence.play({ iterationCount: 1, direction: 'reverse', rate: 1.5, range: [0, 1.8] }))
                     } else {
-                        console.log('on est ici en bas de la page')
-                        console.log('scrollY else', window.scrollY)
+                        setVisionProIsRotatable(false)
+                        setRotateToHalf(true)
                     }
                 }
             })
         })
         observer.observe(document.querySelector('.page2'))
     }
+
+
 
     useEffect(() => {
         setTimeout(() => {
